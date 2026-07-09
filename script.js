@@ -17,7 +17,14 @@ addButton.addEventListener("click", () => {
 
     deleteButton.addEventListener("click", () => {
         item.remove();
-    })
+    });
+
+    const finishButton = document.createElement("button")
+    finishButton.textContent = "Concluído";
+    item.appendChild(finishButton);
+    finishButton.addEventListener("click", () => {
+    item.classList.toggle("concluida");
+    });
+
 
 });
-
